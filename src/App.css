@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Oxygen", sans-serif;
+  background-size: 1500px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  font-size: 120px;
+  margin: -25px 0 -15px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App h3 {
+  font-size: 30px;
+  margin-left: -20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App h6 {
+  margin: 0 0 25px -19px;
 }
 
-.App-link {
-  color: #61dafb;
+.App ul {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App button {
+  border: none;
+  background-color: transparent;
+  font-size: 22px;
+  margin-top: -4px;
+}
+
+.App button:hover {
+  cursor: pointer;
+}
+
+.App p {
+  margin: -190px 0 0 245px;
+}
+
+.App .page {
+  display: block;
+  margin: 100px auto 200px;
+  max-width: 950px;
+  border: 3px white;
+  padding: 2em;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 60px 55px,
+    rgba(0, 0, 0, 0.12) 0px -20px 35px, rgba(0, 0, 0, 0.12) 0px 10px 10px,
+    rgba(0, 0, 0, 0.17) 0px 20px 20px, rgba(0, 0, 0, 0.09) 0px -10px 10px;
+  border-radius: 10px;
+}
+
+.App .forecast-day {
+  margin-left: 3px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.App .forecast-weather-max {
+  opacity: 80;
+  font-weight: bold;
+}
+
+.App .github-link {
+  color: blue;
+}
+
+.App .github-link:hover {
+  color: blue;
+}
+
+.App .units {
+  position: relative;
+  left: 85px;
+  top: 38px;
+  font-size: 18px;
+}
+
+.App .color {
+  color: #eb6e4c;
+}
+
+.App .celsius {
+  margin: 0 0 7px -1px;
+}
+
+.App .fahrenheit {
+  margin-top: -3px;
+}
+
+.App .active {
+  color: black;
 }

@@ -1,0 +1,43 @@
+.max-min-label {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.Conditions .high-temp {
+  margin-left: 13px;
+}
+
+.Conditions .low-temp {
+  margin-left: 55px;
+}
+
+.Conditions .weather-conditions {
+  text-align: right;
+  margin: -40px 0 80px 50px;
+  font-size: 23px;
+}
+
+.Conditions .conditions {
+  margin-left: 0px;
+}
+
+.Conditions .wind-conditions {
+  margin-left: 0;
+}
+
+.Conditions .humidity {
+  margin-left: 10px;
+}
+
+.Conditions .conditions {
+  text-transform: capitalize;
+}
+
+.Conditions .temp-max {
+  margin-left: 20px;
+}
+
+.Conditions .temp-min {
+  margin-left: 54px;
+}
