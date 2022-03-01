@@ -4,7 +4,7 @@ import "./Search.css";
 
 export default function Search() {
   return (
-    <div className="col-md-4 offset-md-4 md-auto">
+    <div className="col-sm-4 offset-md-4 md-auto">
       <form>
         <input
           type="search"
