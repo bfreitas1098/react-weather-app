@@ -16,7 +16,7 @@ function App() {
           alt="Weather icon"
         />
         <h1>50°</h1>
-        <div className="row mt-3">
+        <div className="row mt-2">
           <div className="col-sm">
             <a href="/" rel="noreferrer" className="celsius-link">
               C
@@ -32,7 +32,7 @@ function App() {
           </div>
         </div>
         <br />
-        <h5 className="mt-3">Partly Cloudy</h5>
+        <h5 className="mt-2">Partly Cloudy</h5>
         <div className="row">
           <div className="col-sm">
             <h6 className="mt-5">Wind</h6>

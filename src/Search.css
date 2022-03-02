@@ -8,4 +8,5 @@
 .Search .search-box {
   border: solid 2px #272343;
   margin-right: 15px;
+  border-radius: 2px;
 }
