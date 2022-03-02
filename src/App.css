@@ -1,96 +1,12 @@
 body {
-  font-family: "Oxygen", sans-serif;
-  background-size: 1500px;
+  margin: 0 auto;
+  max-width: 300px;
 }
 
 .App h1 {
-  font-size: 120px;
-  margin: -25px 0 -15px 0;
+  font-size: 70px;
 }
 
-.App h3 {
-  font-size: 30px;
-  margin-left: -20px;
-}
-
-.App h6 {
-  margin: 0 0 25px -19px;
-}
-
-.App ul {
-  list-style: none;
-}
-
-.App button {
-  border: none;
-  background-color: transparent;
-  font-size: 22px;
-  margin-top: -4px;
-}
-
-.App button:hover {
-  cursor: pointer;
-}
-
-.App p {
-  margin: -190px 0 0 245px;
-}
-
-.App .page {
-  display: block;
-  margin: 120px auto 100px;
-  max-width: 950px;
-  border: 3px white;
-  padding: 3em;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 60px 55px,
-    rgba(0, 0, 0, 0.12) 0px -20px 35px, rgba(0, 0, 0, 0.12) 0px 10px 10px,
-    rgba(0, 0, 0, 0.17) 0px 20px 20px, rgba(0, 0, 0, 0.09) 0px -10px 10px;
-  border-radius: 10px;
-}
-
-.App .forecast-day {
-  margin-left: 3px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.App .forecast-weather-max {
-  opacity: 80;
-  font-weight: bold;
-}
-
-.App .github-link {
-  color: blue;
-}
-
-.App .github-link:hover {
-  color: blue;
-}
-
-.App .units {
-  position: relative;
-  left: 85px;
-  top: 38px;
-  font-size: 18px;
-}
-
-.App .color {
-  color: #eb6e4c;
-}
-
-.App .celsius {
-  margin: 0 0 7px -1px;
-}
-
-.App .fahrenheit {
-  margin-top: -3px;
-}
-
-.App .active {
-  color: black;
-}
-
-.App .bottom-line {
-  margin-top: -115px;
+.App img {
+  width: 80px;
 }
