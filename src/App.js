@@ -6,8 +6,7 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
-  const [loaded, setLoaded] = useState(false);
-  const [weatherInfo, setWeatherInfo] = useState({});
+  const [weatherInfo, setWeatherInfo] = useState({ loaded: false });
 
   let city = "Boca Raton, USA";
   const apiKey = "def97117db95d1d3d51e5affceff1ce7";
@@ -15,26 +14,29 @@ function App() {
   axios.get(apiUrl).then(showTemperature);
 
   function showTemperature(response) {
-    setLoaded(true);
     setWeatherInfo({
+      city: response.data.name,
+      country: response.data.sys.country,
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
+      iconUrl: `https://cdn.onlinewebfonts.com/svg/img_154.png`,
+      date: "Wednesday 11:00 AM",
+      loaded: true,
     });
   }
 
-  if (loaded) {
+  if (weatherInfo.loaded) {
     return (
       <div className="App">
         <div className="container">
-          <h4 className="mt-4">Boca Raton, USA</h4>
-          <div className="mb-4 date">Wednesday 11:00 AM</div>
+          <h4 className="mt-4">
+            {weatherInfo.city}, {weatherInfo.country}
+          </h4>
+          <div className="mb-4 date">{weatherInfo.date}</div>
           <Search />
-          <img
-            src="https://cdn.onlinewebfonts.com/svg/img_154.png"
-            alt="Weather icon"
-          />
+          <img src={weatherInfo.iconUrl} alt="Weather icon" />
           <h1>{weatherInfo.temperature}°</h1>
           <div className="row mt-2">
             <div className="col-sm">
@@ -67,7 +69,7 @@ function App() {
       </div>
     );
   } else {
-    return "Loading...";
+    return "Loading weather...";
   }
 }
 
