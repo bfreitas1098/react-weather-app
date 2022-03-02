@@ -2,7 +2,7 @@
 
 body {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 600px;
   text-align: center;
   background-color: #d5eeff;
   color: #272343;
@@ -28,30 +28,35 @@ body {
   margin-top: 80px;
 }
 
-.App a {
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: bolder;
-}
-
 .App .unit-divider {
   font-size: 21px;
 }
 
 .App .celsius-link {
   position: relative;
-  left: 100px;
+  left: 170px;
   color: #272343;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bolder;
 }
 
 .App .fahrenheit-link {
   position: relative;
-  right: 100px;
+  right: 170px;
   color: white;
   -webkit-text-stroke: 1px #272343;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bolder;
 }
 
 .App .wind-conditions,
 .humidity-conditions {
   font-size: 18px;
+}
+
+.App .bottom-line {
+  margin-top: 187px;
+  font-size: 10px;
 }
