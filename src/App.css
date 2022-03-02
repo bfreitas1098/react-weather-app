@@ -1,12 +1,49 @@
 body {
   margin: 0 auto;
   max-width: 300px;
+  text-align: center;
+  background-color: #d5eeff;
+  color: #272343;
 }
 
 .App h1 {
   font-size: 70px;
 }
 
+.App h5 {
+  font-size: 22px;
+}
+
+.App h6 {
+  font-weight: bolder;
+  font-size: 22px;
+}
+
 .App img {
   width: 80px;
+  margin-top: 100px;
+}
+
+.App a {
+  color: #272343;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.App .unit-divider {
+  font-size: 21px;
+}
+
+.App .celsius-link {
+  margin-right: -110px;
+}
+
+.App .fahrenheit-link {
+  margin-left: -110px;
+}
+
+.App .wind-conditions,
+.humidity-conditions {
+  font-size: 18px;
 }
