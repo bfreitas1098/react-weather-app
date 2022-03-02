@@ -28,7 +28,6 @@ body {
 }
 
 .App a {
-  color: #272343;
   text-decoration: none;
   font-size: 22px;
   font-weight: bolder;
@@ -41,11 +40,14 @@ body {
 .App .celsius-link {
   position: relative;
   left: 100px;
+  color: #272343;
 }
 
 .App .fahrenheit-link {
   position: relative;
   right: 100px;
+  color: white;
+  -webkit-text-stroke: 1px #272343;
 }
 
 .App .wind-conditions,
