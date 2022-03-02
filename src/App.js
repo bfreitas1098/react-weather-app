@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import Search from "./Search";
 
 import "./App.css";
 
@@ -7,8 +8,9 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h4 className="mt-2">Boca Raton, USA</h4>
-        <div className="date">Wednesday 11:00 AM</div>
+        <h4 className="mt-4">Boca Raton, USA</h4>
+        <div className="mb-4 date">Wednesday 11:00 AM</div>
+        <Search />
         <img
           src="https://cdn.onlinewebfonts.com/svg/img_154.png"
           alt="Weather icon"
