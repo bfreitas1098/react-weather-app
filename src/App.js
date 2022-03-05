@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Search from "./Search";
+import Date from "./Date";
 import axios from "axios";
 
 import "./App.css";
@@ -17,7 +18,7 @@ function App() {
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
       iconUrl: `https://cdn.onlinewebfonts.com/svg/img_154.png`,
-      date: "Wednesday 11:00 AM",
+      date: new Date(response.data.dt * 1000),
       loaded: true,
     });
   }
@@ -29,7 +30,9 @@ function App() {
           <h4 className="mt-4">
             {weatherInfo.city}, {weatherInfo.country}
           </h4>
-          <div className="mb-4 date">{weatherInfo.date}</div>
+          <div className="mb-4 date">
+            <Date date={weatherInfo.date} />
+          </div>
           <Search />
           <img src={weatherInfo.iconUrl} alt="Weather icon" />
           <h1>{weatherInfo.temperature}</h1>
