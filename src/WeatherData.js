@@ -8,7 +8,7 @@ function WeatherData(props) {
   return (
     <div className="WeatherData">
       <div className="icon">
-        <WeatherIcon iconId={props.info.icon} name="owm" night />
+        <WeatherIcon iconId={props.info.icon} name="owm" />
       </div>
       <h1>{props.info.temperature}°</h1>
       <div className="row mt-2">
