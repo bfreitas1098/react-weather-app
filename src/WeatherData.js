@@ -1,9 +1,15 @@
 import React from "react";
+import "weather-react-icons/lib/css/weather-icons.css";
+import { WeatherIcon } from "weather-react-icons";
+
+import "./WeatherData.css";
 
 function WeatherData(props) {
   return (
     <div className="WeatherData">
-      <img src={props.info.iconUrl} alt="Weather icon" />
+      <div className="icon">
+        <WeatherIcon iconId={props.info.icon} name="owm" night />
+      </div>
       <h1>{props.info.temperature}°</h1>
       <div className="row mt-2">
         <div className="col-sm">

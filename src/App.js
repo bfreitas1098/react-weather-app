@@ -17,7 +17,7 @@ function App(props) {
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
-      iconUrl: `https://cdn.onlinewebfonts.com/svg/img_154.png`,
+      icon: response.data.weather[0].id,
       loaded: true,
     });
   }

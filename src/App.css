@@ -13,63 +13,20 @@ body {
   font-size: 70px;
 }
 
-.App h5 {
-  font-size: 22px;
-  text-transform: capitalize;
-}
-
-.App h6 {
-  font-weight: bolder;
-  font-size: 22px;
-}
-
-.App img {
-  width: 80px;
-  margin-top: 80px;
-}
-
-.App .unit-divider {
-  font-size: 21px;
-}
-
-.App .celsius-link {
-  position: relative;
-  left: 170px;
-  color: #272343;
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: bolder;
-}
-
-.App .fahrenheit-link {
-  position: relative;
-  right: 170px;
-  color: white;
-  -webkit-text-stroke: 1px #272343;
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: bolder;
-}
-
-.App .wind-conditions,
-.humidity-conditions {
-  font-size: 18px;
-}
-
-.App .bottom-line {
-  margin-top: 187px;
-  font-size: 10px;
-}
-
-.search-button {
+.App .search-button {
   background-color: #272343;
   color: white;
   border: 2px solid #272343;
   border-radius: 4px;
 }
 
-.search-box {
+.App .search-box {
   border: solid 2px #272343;
   margin-right: 15px;
   border-radius: 2px;
+}
+
+.App .bottom-line {
+  margin-top: 207px;
+  font-size: 10px;
 }
