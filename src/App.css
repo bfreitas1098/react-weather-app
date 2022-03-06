@@ -60,3 +60,16 @@ body {
   margin-top: 187px;
   font-size: 10px;
 }
+
+.search-button {
+  background-color: #272343;
+  color: white;
+  border: 2px solid #272343;
+  border-radius: 4px;
+}
+
+.search-box {
+  border: solid 2px #272343;
+  margin-right: 15px;
+  border-radius: 2px;
+}

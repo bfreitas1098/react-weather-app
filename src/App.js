@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Search from "./Search";
+import WeatherData from "./WeatherData";
 import axios from "axios";
 
 import "./App.css";
 
-function App() {
+function App(props) {
   const [weatherInfo, setWeatherInfo] = useState({ loaded: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function showTemperature(response) {
     setWeatherInfo({
@@ -21,6 +22,21 @@ function App() {
     });
   }
 
+  function Search() {
+    const apiKey = "dcc17c3d57640b0236dc66644f1c5237";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(showTemperature);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    Search();
+  }
+
+  function handleSearch(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherInfo.loaded) {
     return (
       <div className="App">
@@ -28,37 +44,18 @@ function App() {
           <h4 className="mt-4">
             {weatherInfo.city}, {weatherInfo.country}
           </h4>
-          <div className="mb-4 date"></div>
-          <Search />
-          <img src={weatherInfo.iconUrl} alt="Weather icon" />
-          <h1>{weatherInfo.temperature}°</h1>
-          <div className="row mt-2">
-            <div className="col-sm">
-              <a href="/" rel="noreferrer" className="celsius-link">
-                C
-              </a>
-            </div>
-            <div className="col-sm unit-divider">
-              <strong>|</strong>
-            </div>
-            <div className="col-sm">
-              <a href="/" rel="noreferrer" className="fahrenheit-link">
-                F
-              </a>
-            </div>
-          </div>
-          <br />
-          <h5 className="mt-2">{weatherInfo.description}</h5>
-          <div className="row">
-            <div className="col-sm">
-              <h6 className="mt-5">Wind</h6>
-              <div className="wind-conditions">{weatherInfo.wind} mph</div>
-            </div>
-            <div className="col-sm">
-              <h6 className="mt-5">Humidity</h6>
-              <div className="humidity-conditions">{weatherInfo.humidity}%</div>
-            </div>
-          </div>
+          <div className="mb-4 date">Saturday 2:00 PM</div>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              placeholder="Enter a location"
+              autoFocus="on"
+              className="search-box"
+              onChange={handleSearch}
+            />
+            <input type="submit" value="Search" className="search-button" />
+          </form>
+          <WeatherData info={weatherInfo} />
         </div>
         <p className="bottom-line">
           This weather app was coded by{" "}
@@ -82,11 +79,7 @@ function App() {
       </div>
     );
   } else {
-    let city = "Boca Raton, USA";
-    const apiKey = "dcc17c3d57640b0236dc66644f1c5237";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(showTemperature);
-
+    Search();
     return "Loading weather...";
   }
 }
