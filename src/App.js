@@ -17,7 +17,7 @@ function App(props) {
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
-      icon: response.data.weather[0].id,
+      icon: response.data.weather[0].icon,
       loaded: true,
     });
   }
