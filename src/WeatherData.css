@@ -10,6 +10,7 @@
   text-decoration: none;
   font-size: 22px;
   font-weight: bolder;
+  -webkit-text-stroke: 1px #272343;
 }
 
 .WeatherData .fahrenheit-link {
