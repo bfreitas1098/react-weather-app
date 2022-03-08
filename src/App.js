@@ -21,6 +21,7 @@ function App(props) {
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
+      coordinates: response.data.coord,
       loaded: true,
     });
   }
@@ -62,7 +63,7 @@ function App(props) {
           </form>
           <WeatherData info={weatherInfo} />
         </div>
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherInfo.coordinates} />
         <p className="bottom-line">
           This weather app was coded by{" "}
           <a
