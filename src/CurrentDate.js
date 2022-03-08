@@ -18,7 +18,7 @@ function CurrentDate(props) {
   } else if (hours > 12) {
     hours = hours - 12;
   } else {
-    hours = hours;
+    hours = props.date.getHours();
   }
   let minutes = props.date.getMinutes();
   if (minutes < 10) {
@@ -26,9 +26,17 @@ function CurrentDate(props) {
   }
 
   if (props.date.getHours() > 12) {
-    return `${day} ${hours}:${minutes} PM`;
+    return (
+      <div className="CurrentDate">
+        {day} {hours}:{minutes} PM
+      </div>
+    );
   } else {
-    return `${day} ${hours}:${minutes} AM`;
+    return (
+      <div className="CurrentDate">
+        {day} {hours}:{minutes} AM
+      </div>
+    );
   }
 }
 
