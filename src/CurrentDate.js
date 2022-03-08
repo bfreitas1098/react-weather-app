@@ -20,7 +20,7 @@ function CurrentDate(props) {
   } else {
     hours = hours;
   }
-  const minutes = props.date.getMinutes();
+  let minutes = props.date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
