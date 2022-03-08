@@ -1,3 +1,8 @@
+.TemperatureUnits h1 {
+  font-size: 70px;
+  margin-top: -20px;
+}
+
 .TemperatureUnits .celsius-link {
   position: relative;
   left: 170px;

@@ -9,10 +9,6 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-.App h1 {
-  font-size: 70px;
-}
-
 .App .search-button {
   background-color: #272343;
   color: white;
