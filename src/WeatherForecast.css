@@ -1,0 +1,21 @@
+.WeatherForecast {
+  margin-top: 5rem;
+}
+
+.WeatherForecast .icon {
+  font-size: 19px;
+}
+
+.WeatherForecast .forecast-day {
+  font-size: 18px;
+}
+
+.WeatherForecast .forecast-max,
+.forecast-min {
+  font-size: 18px;
+  margin: 0 8px 0;
+}
+
+.WeatherForecast .forecast-min {
+  opacity: 0.6;
+}

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import axios from "axios";
 import WeatherData from "./WeatherData";
 import CurrentDate from "./CurrentDate";
-import axios from "axios";
+import WeatherForecast from "./WeatherForecast";
 
 import "./App.css";
 
@@ -61,6 +62,7 @@ function App(props) {
           </form>
           <WeatherData info={weatherInfo} />
         </div>
+        <WeatherForecast />
         <p className="bottom-line">
           This weather app was coded by{" "}
           <a
