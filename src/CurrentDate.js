@@ -25,19 +25,13 @@ function CurrentDate(props) {
     minutes = `0${minutes}`;
   }
 
-  if (props.date.getHours() > 12) {
-    return (
-      <div className="CurrentDate">
-        {day} {hours}:{minutes} PM
-      </div>
-    );
-  } else {
-    return (
-      <div className="CurrentDate">
-        {day} {hours}:{minutes} AM
-      </div>
-    );
-  }
+  return (
+    <div className="CurrentDate">
+      {props.date.getHours() > 12
+        ? `${day} ${hours}:${minutes} PM`
+        : `${day} ${hours}:${minutes} AM`}
+    </div>
+  );
 }
 
 export default CurrentDate;
