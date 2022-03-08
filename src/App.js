@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import WeatherData from "./WeatherData";
+import CurrentDate from "./CurrentDate";
 import axios from "axios";
 
 import "./App.css";
@@ -18,6 +19,7 @@ function App(props) {
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
+      date: new Date(response.data.dt * 1000),
       loaded: true,
     });
   }
@@ -44,7 +46,9 @@ function App(props) {
           <h4 className="mt-4">
             {weatherInfo.city}, {weatherInfo.country}
           </h4>
-          <div className="mb-4 date">Saturday 2:00 PM</div>
+          <div className="mb-4 date">
+            <CurrentDate date={weatherInfo.date} />
+          </div>
           <form onSubmit={handleSubmit}>
             <input
               type="search"
