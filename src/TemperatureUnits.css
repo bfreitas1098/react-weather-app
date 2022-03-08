@@ -1,0 +1,27 @@
+.TemperatureUnits .celsius-link {
+  position: relative;
+  left: 170px;
+  color: #272343;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bolder;
+  -webkit-text-stroke: 1px #272343;
+}
+
+.TemperatureUnits .fahrenheit-link {
+  position: relative;
+  right: 170px;
+  -webkit-text-stroke: 1px #272343;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bolder;
+  color: #272343;
+}
+
+.TemperatureUnits .active {
+  color: white;
+}
+
+.TemperatureUnits .unit-divider {
+  font-size: 21px;
+}

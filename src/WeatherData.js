@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import TemperatureUnits from "./TemperatureUnits";
 
 import "./WeatherData.css";
 
@@ -9,22 +10,7 @@ function WeatherData(props) {
       <div className="icon">
         <WeatherIcon code={props.info.icon} />
       </div>
-      <h1>{props.info.temperature}°</h1>
-      <div className="row mt-2">
-        <div className="col-sm">
-          <a href="/" rel="noreferrer" className="celsius-link">
-            C
-          </a>
-        </div>
-        <div className="col-sm unit-divider">
-          <strong>|</strong>
-        </div>
-        <div className="col-sm">
-          <a href="/" rel="noreferrer" className="fahrenheit-link">
-            F
-          </a>
-        </div>
-      </div>
+      <TemperatureUnits fahrenheit={props.info.temperature} />
       <br />
       <h5 className="mt-2">{props.info.description}</h5>
       <div className="row">

@@ -3,30 +3,6 @@
   margin-top: 50px;
 }
 
-.WeatherData .celsius-link {
-  position: relative;
-  left: 170px;
-  color: #272343;
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: bolder;
-  -webkit-text-stroke: 1px #272343;
-}
-
-.WeatherData .fahrenheit-link {
-  position: relative;
-  right: 170px;
-  color: white;
-  -webkit-text-stroke: 1px #272343;
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: bolder;
-}
-
-.WeatherData .unit-divider {
-  font-size: 21px;
-}
-
 .WeatherData .wind-conditions,
 .humidity-conditions {
   font-size: 18px;
