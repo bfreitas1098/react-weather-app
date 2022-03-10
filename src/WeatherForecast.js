@@ -22,7 +22,9 @@ function WeatherForecast(props) {
       <div className="WeatherForecast">
         {forecast.map(function (dailyForecast, index) {
           if (index < 6) {
-            return <ForecastDay data={dailyForecast} />;
+            return <ForecastDay data={dailyForecast} key={index} />;
+          } else {
+            return null;
           }
         })}
       </div>
