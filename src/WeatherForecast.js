@@ -16,9 +16,11 @@ function WeatherForecast(props) {
   if (loaded) {
     return (
       <div className="WeatherForecast">
-        <div className="row">
-          <ForecastDay data={forecast} />
-        </div>
+        {forecast.map(function (dailyForecast, index) {
+          if (index < 6) {
+            return <ForecastDay data={dailyForecast} />;
+          }
+        })}
       </div>
     );
   } else {
