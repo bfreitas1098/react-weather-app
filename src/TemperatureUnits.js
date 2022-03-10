@@ -24,7 +24,7 @@ function TemperatureUnits(props) {
       <div className="TemperatureUnits">
         <h1>{props.fahrenheit}°</h1>
         <div className="row mt-2">
-          <div className="col-sm">
+          <div className="col-4">
             <a
               href="/"
               rel="noreferrer"
@@ -34,10 +34,10 @@ function TemperatureUnits(props) {
               C
             </a>
           </div>
-          <div className="col-sm unit-divider">
+          <div className="col-4 unit-divider">
             <strong>|</strong>
           </div>
-          <div className="col-sm">
+          <div className="col-4">
             <a href="/" rel="noreferrer" className="fahrenheit-link active">
               F
             </a>
@@ -50,15 +50,15 @@ function TemperatureUnits(props) {
       <div className="TemperatureUnits">
         <h1>{Celsius()}°</h1>
         <div className="row mt-2">
-          <div className="col-sm">
+          <div className="col-4">
             <a href="/" rel="noreferrer" className="celsius-link active">
               C
             </a>
           </div>
-          <div className="col-sm unit-divider">
+          <div className="col-4 unit-divider">
             <strong>|</strong>
           </div>
-          <div className="col-sm">
+          <div className="col-4">
             <a
               href="/"
               rel="noreferrer"

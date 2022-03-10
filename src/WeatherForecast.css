@@ -1,3 +1,9 @@
 .WeatherForecast {
   margin-top: 5rem;
 }
+
+@media (max-width: 576px) {
+  .WeatherForecast {
+    margin-left: 10px;
+  }
+}

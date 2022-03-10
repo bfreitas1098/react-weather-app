@@ -15,7 +15,7 @@
 
 .TemperatureUnits .fahrenheit-link {
   position: relative;
-  right: 170px;
+  left: -170px;
   -webkit-text-stroke: 1px #272343;
   text-decoration: none;
   font-size: 22px;
