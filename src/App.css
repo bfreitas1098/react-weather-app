@@ -28,6 +28,10 @@ body {
   font-size: 10px;
 }
 
+.App .bottom-line a {
+  text-decoration: none;
+}
+
 @media (max-width: 576px) {
   body {
     margin-right: 15px;

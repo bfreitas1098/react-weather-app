@@ -54,8 +54,11 @@ function App(props) {
   }
 
   if (weatherInfo.loaded) {
+    {
+      getCurrentLocation();
+    }
     return (
-      <div className="App" onLoad={getCurrentLocation()}>
+      <div className="App">
         <div className="container">
           <h4 className="mt-4">
             {weatherInfo.city}, {weatherInfo.country}
