@@ -26,6 +26,18 @@ function App(props) {
     });
   }
 
+  function getCurrentLocation() {
+    navigator.geolocation.getCurrentPosition(handlePosition);
+  }
+
+  function handlePosition(response) {
+    let latitude = response.data.coord.lat;
+    let longitude = response.data.coord.lon;
+    const apiKey = "dcc17c3d57640b0236dc66644f1c5237";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(showTemperature);
+  }
+
   function Search() {
     const apiKey = "dcc17c3d57640b0236dc66644f1c5237";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -43,7 +55,7 @@ function App(props) {
 
   if (weatherInfo.loaded) {
     return (
-      <div className="App">
+      <div className="App" onLoad={getCurrentLocation()}>
         <div className="container">
           <h4 className="mt-4">
             {weatherInfo.city}, {weatherInfo.country}
